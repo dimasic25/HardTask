@@ -21,10 +21,9 @@ class InsertController extends Controller
             DB::table('posts')->insert(
                 ['title' => $title, 'content' => $content, 'date' => $date, 'created_at' => date(DATE_RSS), 'updated_at' => date(DATE_RSS)]);
             echo "Record inserted successfully.<br/>";
-            echo '<a href = "">Click Here</a> to go back.';
         } else {
             echo "Record inserted unsuccessfully.<br/>";
-            echo '<a href = "">Click Here</a> to go back.';
         }
+        echo '<a href = "">Click Here</a> to go back.';
     }
 }
