@@ -17,9 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::get('/', 'PostsController@index');
 
-    Route::get('/insert', 'InsertController@insertform')->name('/');
+    Route::get('/insert', 'InsertController@insertform');
 
-    Route::post('/insert', 'InsertController@insert');
+    Route::post('/insert', 'InsertController@insert')->name('/insert');
+
+    Route::view('/update', 'update')->name('/update');
+
+    Route::get('/update1', 'UpdateController@download')->name('/update1');
+
+    Route::post('/update2', 'UpdateController@update')->name('/update2');
 });
-
 

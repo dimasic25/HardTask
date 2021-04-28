@@ -25,6 +25,8 @@ class InsertController extends Controller
         } else {
             echo "Record inserted unsuccessfully.<br/>";
         }
-        echo '<a href = "">Click Here</a> to go back.';
+        echo '<a href = "/insert">Click Here</a> to go back.<br>';
+
+        echo '<a href = "/">Click Here</a> to go home page.';
     }
 }

@@ -7,13 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
-<form method='post' action="{{Route("/insert")}}">
+<form method='post' action="{{Route("/update2")}}">
     {{csrf_field()}}
-    Введите название поста: <input type='text' name='title'>
+    <input name="id" value="<?= $id ?>" readonly>
     <br><br>
-    <input name='content' placeholder="Текст поста">
+    Введите название поста: <input type='text' name='title' value="<?= $title ?>">
     <br><br>
-    Введите дату: <input type='date' name='date'>
+    <input name='content' placeholder="Текст поста" value="<?= $content ?>">
+    <br><br>
+    Введите дату: <input type='date' name='date' value="<?= $date ?>">
     <br><br>
     <input type='submit' placeholder="Загрузить">
 </form>

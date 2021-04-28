@@ -10,8 +10,12 @@
 <body>
 <ul>
     @foreach($posts as $post)
-        <li>{{$post->title . ' ' . $post->content . ' ' . $post->date}}</li>
+        <li>{{$post->id . ' ' . $post->title . ' ' . $post->content . ' ' . $post->date}}</li>
     @endforeach
+    <br>
+    <a href="/insert">Вставить пост</a>
+    <br>
+    <a href="/update">Обновить пост</a>
 </ul>
 
 </body>
