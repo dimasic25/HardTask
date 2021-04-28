@@ -12,6 +12,7 @@ class InsertController extends Controller
         return view('insert');
     }
 
+
     public function insert(Request $request)
     {
         $title = $request->input('title');
