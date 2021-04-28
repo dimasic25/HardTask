@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,5 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
+
     Route::get('/posts', 'PostsController@index');
 });
+
+
+Route::get("/", function () {
+    return view('insert');
+})->name("/");
+
+Route::post("/", function (Request $request){
+    var_dump($request->input('title'));
+})->name("comments");
+
