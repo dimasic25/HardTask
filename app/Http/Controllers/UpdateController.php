@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use function PHPUnit\Framework\isEmpty;
 
 class UpdateController extends Controller
 {
@@ -14,7 +13,6 @@ class UpdateController extends Controller
         if (isset($id)) {
             $row = DB::table('posts')->where('id', '=', $id)->first();
             if ($row !== null) {
-                //print_r($row->title);
                 $id = $row->id;
                 $title = $row->title;
                 $content = $row->content;
@@ -37,6 +35,7 @@ class UpdateController extends Controller
         } else {
             echo "Record updated unsuccessfully.<br/>";
         }
-        echo '<a href = "/">Click Here</a> to go back.';
+        echo '<a href = "/update">Click Here</a> to go back.<br>';
+        echo '<a href = "/">Click Here</a> to go home page.';
     }
 }

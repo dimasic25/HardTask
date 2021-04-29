@@ -7,15 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
-<form method='post' action="{{Route("/update2")}}">
-    {{csrf_field()}}
-    <input name="id" value="<?= $id ?>" readonly>
+<form method='post' action="{{ route("posts.update") }}">
+    @csrf
+    <input type='text' name="id" readonly value="{{$id}}">
     <br><br>
-    Введите название поста: <input type='text' name='title' value="<?= $title ?>">
+    <input type='text' name='title' placeholder="Название поста" value="{{ $title }}">
     <br><br>
-    <input name='content' placeholder="Текст поста" value="<?= $content ?>">
+    <input name='content' placeholder="Текст поста" value="{{ $content }}">
     <br><br>
-    Введите дату: <input type='date' name='date' value="<?= $date ?>">
+    Введите дату: <input type='date' name='date' value="{{ $date }}">
     <br><br>
     <input type='submit' placeholder="Загрузить">
 </form>

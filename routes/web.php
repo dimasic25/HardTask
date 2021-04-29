@@ -17,14 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::get('/', 'PostsController@index');
 
-    Route::get('/insert', 'InsertController@insertform');
+    Route::view('/insert', 'insert');
 
-    Route::post('/insert', 'InsertController@insert')->name('/insert');
+    Route::post('/insert', 'InsertController@insert')->name('posts.insert');
 
-    Route::view('/update', 'update')->name('/update');
+    Route::view('/update', 'update');
 
-    Route::get('/update1', 'UpdateController@download')->name('/update1');
+    Route::get( '/updateById', 'UpdateController@download')->name('posts.download');
 
-    Route::post('/update2', 'UpdateController@update')->name('/update2');
+    Route::post('/updateDate', 'UpdateController@update')->name('posts.update');
 });
 

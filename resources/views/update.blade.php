@@ -8,8 +8,7 @@
     <title>Обновление данных</title>
 </head>
 <body>
-<form method='get' action="{{Route("/update1")}}">
-    {{csrf_field()}}
+<form method='get' action="<?= route('posts.download')?>">
     Введите id записи: <input type='text' name='id'>
     <input type='submit' value='Загрузить'>
 </form>

@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
-<form method='post' action="{{Route("/insert")}}">
-    {{csrf_field()}}
-    Введите название поста: <input type='text' name='title'>
+<form method='post' action="{{route('posts.insert')}}">
+    @csrf
+    <input type='text' name='title' placeholder="Название поста">
     <br><br>
     <input name='content' placeholder="Текст поста">
     <br><br>
